@@ -1,0 +1,25 @@
+1. Notice that we are using key = {i} inside map() 
+function. This will help React to update only 
+the necessary elements instead of re-rendering 
+the entire list when something changes.
+ It is a huge performance boost for larger number 
+ of dynamically created elements.
+
+ 2. Component Lifecycle
+    componentWillMount: thực hiện trước khi render ở
+phía client và server
+    componentDidMount: thực hiện sau khi render lần đầu
+ở phía client. Nơi mà AJAX request, DOM, state update xuất hiện
+setTimeout, setInterval cũng ở đây
+    componentWillReceiveProps: được gọi ngay khi prop cập nhật trước khi 
+1 hàm render khác được gọi đến. Dùng hàm setNewNumber ở đây
+    shouldComnponentUpdate: true or false. Xác định component có đc 
+update hay ko
+    componentWillUpdate: gọi trước khi render
+    componentDidUpdate: sau khi render
+    ComponentWillUnmount: sau khi component unmount dom
+ 
+ 3. Flux
+Data flow: Action -> Dispatcher -> Store -> View
+
+Action: Action 
